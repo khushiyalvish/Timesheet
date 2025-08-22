@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\MyProject\\TimesheetAPI\\Timesheet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8C8864FF-AD28-4E31-BC68-0DF047BF9EDE}|Timesheet.csproj|d:\\myproject\\timesheetapi\\timesheet\\controllers\\timesheetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C8864FF-AD28-4E31-BC68-0DF047BF9EDE}|Timesheet.csproj|solutionrelative:controllers\\timesheetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C8864FF-AD28-4E31-BC68-0DF047BF9EDE}|Timesheet.csproj|d:\\myproject\\timesheetapi\\timesheet\\dal\\repositories\\timesheetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C8864FF-AD28-4E31-BC68-0DF047BF9EDE}|Timesheet.csproj|solutionrelative:dal\\repositories\\timesheetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C8864FF-AD28-4E31-BC68-0DF047BF9EDE}|Timesheet.csproj|d:\\myproject\\timesheetapi\\timesheet\\dal\\interfaces\\itimesheetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C8864FF-AD28-4E31-BC68-0DF047BF9EDE}|Timesheet.csproj|solutionrelative:dal\\interfaces\\itimesheetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TimesheetController.cs",
+              "DocumentMoniker": "D:\\MyProject\\TimesheetAPI\\Timesheet\\Controllers\\TimesheetController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TimesheetController.cs",
+              "ToolTip": "D:\\MyProject\\TimesheetAPI\\Timesheet\\Controllers\\TimesheetController.cs",
+              "RelativeToolTip": "Controllers\\TimesheetController.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAIwFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T11:49:40.681Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ITimesheetRepository.cs",
+              "DocumentMoniker": "D:\\MyProject\\TimesheetAPI\\Timesheet\\DAL\\Interfaces\\ITimesheetRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\Interfaces\\ITimesheetRepository.cs",
+              "ToolTip": "D:\\MyProject\\TimesheetAPI\\Timesheet\\DAL\\Interfaces\\ITimesheetRepository.cs",
+              "RelativeToolTip": "DAL\\Interfaces\\ITimesheetRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T10:03:45.84Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TimesheetRepository.cs",
+              "DocumentMoniker": "D:\\MyProject\\TimesheetAPI\\Timesheet\\DAL\\Repositories\\TimesheetRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\Repositories\\TimesheetRepository.cs",
+              "ToolTip": "D:\\MyProject\\TimesheetAPI\\Timesheet\\DAL\\Repositories\\TimesheetRepository.cs",
+              "RelativeToolTip": "DAL\\Repositories\\TimesheetRepository.cs",
+              "ViewState": "AgIAAC8AAADgMjMzMzM4wE8AAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T11:50:42.771Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 871,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

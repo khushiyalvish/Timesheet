@@ -1,0 +1,181 @@
+/* Header.css - polished, readable header styles */
+
+/* Base */
+:root{
+  --bg: #dbe1c4;
+  --muted: #6b7280;
+  --accent: #3f5efb;
+  --accent-2: #fc466b;
+  --panel: #ffffff;
+  --shadow: 0 6px 18px rgba(15,23,42,0.08);
+}
+
+/* Use Inter (add link to index.html) */
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Verdana, sans-serif;
+  margin: 0;
+  color: #111827;
+  background: #f7f9fb;
+}
+
+/* Header container */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 28px;
+  background: linear-gradient(90deg, #dadff5, #ebcaf5); 
+  color: #333;
+  border-bottom: 1px solid #e0e6f0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+
+/* Logo */
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2a0f1e;
+  letter-spacing: 0.2px;
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Simple nav links */
+.nav a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 530;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: all 160ms ease;
+}
+.nav a:hover,
+.nav a:focus {
+  color: var(--accent);
+  background: rgba(63,94,251,0.06);
+  outline: none;
+}
+
+/* Services button - appears like a nav link but a button */
+.services-container { position: relative; }
+.nav-link.services-btn {
+  background: transparent;
+  border: none;
+  color: #374151;
+  font-weight: 530;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  transition: all 160ms ease;
+}
+.nav-link.services-btn:hover,
+.nav-link.services-btn:focus {
+  color: var(--accent);
+  background: rgba(63,94,251,0.06);
+  outline: none;
+}
+
+/* small caret (using borders) */
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid currentColor;
+  transition: transform 150ms ease;
+  opacity: 0.9;
+}
+.caret.open { transform: rotate(180deg); }
+
+/* Profile button style */
+.profile-container { position: relative; }
+.profile {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 18px rgba(63,94,251,0.08);
+  transition: transform 120ms ease;
+}
+.profile:active { transform: translateY(1px); }
+.profile:focus { outline: 3px solid rgba(63,94,251,0.12); }
+
+/* Dropdown menu (shared by services & profile) */
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  margin-top: 12px;
+  min-width: 200px;
+  background: var(--panel);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  z-index: 200;
+  transform-origin: top right;
+  animation: slideDown 160ms ease;
+  border: 1px solid rgba(15,23,42,0.06);
+}
+
+/* left align for services dropdown */
+.services-container .dropdown-menu { right: auto; left: 0; transform-origin: top left; }
+
+/* dropdown items */
+.dropdown-item {
+  width: 100%;
+  padding: 10px 14px;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background: #f6f8ff;
+  color: var(--accent);
+  outline: none;
+}
+
+/* subtle divider style (if you want to separate items) */
+.dropdown-item + .dropdown-item { border-top: 1px solid rgba(15,23,42,0.03); }
+
+/* small animations */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-6px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Responsive spacing */
+@media (max-width: 860px) {
+  .header { padding: 12px 16px; }
+  .nav { gap: 12px; }
+  .logo { font-size: 18px; }
+}

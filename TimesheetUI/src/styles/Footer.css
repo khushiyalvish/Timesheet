@@ -1,0 +1,9 @@
+
+
+footer {
+  /* background-color: #dbe1c4; */
+background: linear-gradient(90deg, #dadff5, #ebcaf5);
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}

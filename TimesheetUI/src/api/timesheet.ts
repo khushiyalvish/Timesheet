@@ -22,3 +22,15 @@ export const InsertTimesheet = async (model: TimesheetModel): Promise<number> =>
 };
 
 
+
+
+export const getTimesheetById = async (id: number): Promise<TimesheetModel> => {
+  const resp = await axios.get(`/Timesheet/timesheet/detail/${id}`);
+  return resp.data;
+};
+
+// Update timesheet
+export const updateTimesheet = async (id: number, model: TimesheetModel): Promise<TimesheetModel> => {
+  const resp = await axios.put(`/timesheet/update/${id}`, model);
+  return resp.data;
+};

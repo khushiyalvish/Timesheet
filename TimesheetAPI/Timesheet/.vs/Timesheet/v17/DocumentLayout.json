@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Controllers\\TimesheetController.cs",
               "ToolTip": "D:\\MyProject\\TimesheetAPI\\Timesheet\\Controllers\\TimesheetController.cs",
               "RelativeToolTip": "Controllers\\TimesheetController.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAIwFMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGsAAACANDMzMzMjwIIAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-14T11:49:40.681Z",
               "IsPinned": true,
@@ -49,8 +49,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-18T10:03:45.84Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -63,8 +62,7 @@
               "ViewState": "AgIAAC8AAADgMjMzMzM4wE8AAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-14T11:50:42.771Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",

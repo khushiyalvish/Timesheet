@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Controllers\\TimesheetController.cs",
               "ToolTip": "D:\\MyProject\\TimesheetAPI\\Timesheet\\Controllers\\TimesheetController.cs",
               "RelativeToolTip": "Controllers\\TimesheetController.cs",
-              "ViewState": "AgIAAHgAAAAAxJiZmZnpv1MAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJEAAADAlpmZmRkfwI8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-14T11:49:40.681Z",
               "IsPinned": true,
@@ -49,7 +49,8 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-18T10:03:45.84Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -59,10 +60,11 @@
               "RelativeDocumentMoniker": "DAL\\Repositories\\TimesheetRepository.cs",
               "ToolTip": "D:\\MyProject\\TimesheetAPI\\Timesheet\\DAL\\Repositories\\TimesheetRepository.cs",
               "RelativeToolTip": "DAL\\Repositories\\TimesheetRepository.cs",
-              "ViewState": "AgIAAC8AAADgMjMzMzM4wE8AAABMAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAACAKjMzMzMXwE8AAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-14T11:50:42.771Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",

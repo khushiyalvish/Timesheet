@@ -15,20 +15,6 @@ const EditTimesheet: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     if (!id) return;
-  //     try {
-  //       const data = await getTimesheetById(Number(id));
-  //       setTimesheet(data);
-  //     } catch (err) {
-  //       setError("Failed to fetch timesheet");
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //   fetchData();
-  // }, [id]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -55,10 +41,7 @@ const EditTimesheet: React.FC = () => {
     setTimesheet({ ...timesheet, [e.target.name]: e.target.value });
   };
 
-  // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   if (!timesheet) return;
-  //   setTimesheet({ ...timesheet, [e.target.name]: e.target.value });
-  // };
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -66,7 +49,7 @@ const EditTimesheet: React.FC = () => {
 
     try {
       await updateTimesheet(timesheet.id!, timesheet);
-      toast.success("Timesheet updated successfully!");
+      toast.success("Timesheet updated successfully!");{autoClose: 2000}
       navigate("/timesheet");
     } catch {
       toast.error("Update failed");
@@ -87,7 +70,7 @@ const EditTimesheet: React.FC = () => {
           <input
             type="date"
             name="workDate"
-            value={timesheet.workDate?.split("T")[0] ?? ""}  // ✅ ensure proper date format
+            value={timesheet.workDate?.split("T")[0] ?? ""}  
             onChange={handleChange}
           />
         </div>
@@ -101,7 +84,7 @@ const EditTimesheet: React.FC = () => {
             placeholder="Enter task details"
           />
         </div>
-        <div>
+        <div className="form-group">
           <label>Project:</label>
           <select
             name="projectId"

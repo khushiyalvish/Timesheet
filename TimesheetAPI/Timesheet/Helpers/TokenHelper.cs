@@ -16,6 +16,7 @@ namespace Timesheet.Helpers
 
             var claims = new[]
             {
+            new Claim("userId", userId),
             new Claim(JwtRegisteredClaimNames.Sub, userId),
              new Claim(ClaimTypes.NameIdentifier, userId),
             new Claim(JwtRegisteredClaimNames.Email, email),

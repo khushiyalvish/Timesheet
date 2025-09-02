@@ -11,5 +11,10 @@ namespace Timesheet.DAL.Interfaces
         Task<GetTimesheetModel?> GetTimesheetByIdAsync(long Id);
         Task<bool> UpdateTimesheetAsync(GetTimesheetModel model);
 
+        Task<CheckInResponseModel> InsertCheckInAsync(CheckInRequestModel model);
+        Task<IEnumerable<GetCheckinModel>> GetCheckInByUserIdAsync(int userId);
+
+        Task<bool> CheckOutAsync(CheckoutModel model);
+
     }
 }

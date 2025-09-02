@@ -1,24 +1,20 @@
-
 import React, { useEffect, useState } from 'react';
-import type{ TimesheetModel } from '../../types/timesheet';
+import DataTable from 'react-data-table-component';
+import type { TimesheetModel } from '../../types/timesheet';
 import { getTimesheets } from '../../api/timesheet';
-import TimesheetRow from './TimesheetRow';
 import '../../styles/timesheet.css';
 
-const TimesheetList: React.FC<{ refreshKey?: number, onLoaded?: (count: number) => void }> = ({ refreshKey, onLoaded }) => {
+const TimesheetList: React.FC<{ refreshKey?: number }> = ({ refreshKey }) => {
   const [items, setItems] = useState<TimesheetModel[]>([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [filterText, setFilterText] = useState('');
+  const [rowsPerPage, setRowsPerPage] = useState(10);
 
   const load = async () => {
     setLoading(true);
-    setError(null);
     try {
       const data = await getTimesheets();
       setItems(data);
-      if (onLoaded) onLoaded(data.length);
-    } catch (err: any) {
-      setError(err?.message || 'Failed to load timesheets');
     } finally {
       setLoading(false);
     }
@@ -26,27 +22,102 @@ const TimesheetList: React.FC<{ refreshKey?: number, onLoaded?: (count: number) 
 
   useEffect(() => { load(); }, [refreshKey]);
 
-  if (loading) return <div>Loading timesheets...</div>;
-   if (error) return <div className="error">{error}</div>;
+  const columns = [
+    {
+      name: 'Date',
+      selector: (row: TimesheetModel) => new Date(row.workDate).toLocaleDateString(),
+      sortable: true,
+      width: '110px',
+    },
+    {
+      name: 'Day',
+      selector: (row: TimesheetModel) =>
+        new Date(row.workDate).toLocaleDateString(undefined, { weekday: 'short' }),
+      width: '90px',
+      center: true,
+    },
+    {
+      name: 'Particular',
+      selector: (row: TimesheetModel) => row.particular ?? '-',
+      wrap: true,
+      grow: 3,
+      cell: (row: TimesheetModel) => (
+        <div
+          title={row.particular ?? '-'}
+          style={{
+            maxWidth: '350px',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+          }}
+        >
+          {row.particular ?? '-'}
+        </div>
+      ),
+    },
+    {
+      name: 'Project',
+      selector: (row: TimesheetModel) => row.name,
+      width: '120px',
+    },
+    {
+      name: 'Hours',
+      selector: (row: TimesheetModel) => row.hours.toString(),
+      sortable: true,
+      width: '100px',
+      center: true,
+    },
+    {
+      name: 'Actions',
+      width: '120px',
+      cell: (row: TimesheetModel) =>
+        row.id ? (
+          <a href={`/timesheets/${row.id}/edit`} className="btn small">
+            Edit
+          </a>
+        ) : (
+          <button disabled className="btn small">
+            Edit
+          </button>
+        ),
+    },
+  ];
+
+  const filteredItems = items.filter(
+    (i) =>
+      i.particular?.toLowerCase().includes(filterText.toLowerCase()) ||
+      i.name?.toLowerCase().includes(filterText.toLowerCase())
+  );
 
   return (
-    <div className="timesheet-list">
-      <table>
-        <thead>
-          <tr>
-            <th>Date</th><th>Day</th><th>Particular</th><th>ProjectName</th><th>Hours</th><th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {items.length === 0 ? (
-            <tr><td colSpan={6}>No timesheets found</td></tr>
-          ) : items.map(t => <TimesheetRow key={t.id} t={t} />)}
-        </tbody>
-      </table>
+    <div className="timesheet-container">
+      <DataTable
+        columns={columns}
+        data={filteredItems}
+        progressPending={loading}
+        pagination
+        paginationPerPage={rowsPerPage}
+        paginationRowsPerPageOptions={[5, 10, 20, 50]}
+        highlightOnHover
+        dense
+        fixedHeader
+        subHeader
+        subHeaderComponent={
+          <div className="table-header">
+            <h2 className="table-title">Timesheets List</h2>
+            <input
+              type="text"
+              placeholder="Search..."
+              value={filterText}
+              onChange={(e) => setFilterText(e.target.value)}
+              className="search-box"
+            />
+          </div>
+        }
+      />
+
     </div>
   );
 };
 
 export default TimesheetList;
-
-

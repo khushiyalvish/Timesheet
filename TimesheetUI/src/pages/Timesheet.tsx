@@ -34,7 +34,7 @@ const TimesheetPage: React.FC = () => {
       <main className="container">
         <h1></h1>
         <TimesheetForm userId={Number(userId)} onInserted={handleInserted} />
-       <hr/>
+       {/* <hr/> */}
         <TimesheetList refreshKey={refreshKey} />
       </main>
       <Footer />

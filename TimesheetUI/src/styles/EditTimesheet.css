@@ -1,5 +1,17 @@
+:root{
+  --bg: #dbe1c4;
+  --muted: #6b7280;
+  --accent: #3f5efb;
+  --accent-2: #fc466b;
+  --panel: #ffffff;
+  --shadow: 0 6px 18px rgba(15,23,42,0.08);
+}
+
+
+
+/* Container */
 .edit-container {
-  max-width: 500px;
+  max-width: 900px;
   margin: 40px auto;
   padding: 25px;
   background: #fff;
@@ -8,92 +20,61 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Title */
 .edit-container h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #333;
 }
 
+/* Form rows: label left, control right */
 .edit-form .form-group {
-  margin-bottom: 18px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 12px;            /* spacing between label and input */
+  margin-bottom: 18px;
 }
 
+/* Labels: fixed width so all controls start aligned */
 .edit-form label {
+  flex: 0 0 150px;      /* fixed label column */
   font-weight: 600;
-  margin-bottom: 6px;
   color: #444;
 }
 
-.edit-form input {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 15px;
-  transition: border-color 0.2s ease;
-}
-
-.edit-form input:focus {
-  border-color: #4a90e2;
-  outline: none;
-  box-shadow: 0 0 4px rgba(74, 144, 226, 0.4);
-}
-
-.form-actions {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.btn-primary {
-  background: #4a90e2;
-  color: #fff;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.btn-primary:hover {
-  background: #357ab8;
-}
-
-.btn-secondary {
-  background: #f5f5f5;
-  color: #333;
-  border: 1px solid #ddd;
-  padding: 10px 18px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.btn-secondary:hover {
-  background: #e0e0e0;
-}
-
-/* Project dropdown styling */
-.edit-form select {
+/* Inputs/selects: same styling + stretch to fill */
+.edit-form input,
+.edit-form select,
+.edit-form textarea {
+  flex: 1 1 auto;       /* take remaining row space */
+  min-width: 0;         /* prevent overflow in flex */
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 15px;
   background-color: #fff;
+  box-sizing: border-box;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  appearance: none; /* remove default browser arrow */
-  cursor: pointer;
 }
 
-.edit-form select:focus {
+.edit-form textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* Focus states */
+.edit-form input:focus,
+.edit-form select:focus,
+.edit-form textarea:focus {
   border-color: #4a90e2;
   outline: none;
   box-shadow: 0 0 4px rgba(74, 144, 226, 0.4);
 }
 
-/* Optional: custom dropdown arrow */
+/* Select: custom arrow (no fixed width!) */
 .edit-form select {
+  appearance: none;
+  cursor: pointer;
   background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='18' viewBox='0 0 24 24' width='18' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
   background-repeat: no-repeat;
   background-position: right 12px center;
@@ -101,4 +82,55 @@
   padding-right: 36px; /* space for arrow */
 }
 
+/* Date input icon spacing (Chrome/Edge/WebKit) */
+.edit-form input[type="date"]::-webkit-calendar-picker-indicator {
+  padding-right: 6px;
+  cursor: pointer;
+}
 
+/* Action buttons: right aligned */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-primary {
+  /* background: #4a90e2; */
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #fff;
+  border: none;
+}
+.btn-primary:hover { background: #357ab8; }
+
+.btn-secondary {
+  background: #f5f5f5;
+  color: #333;
+  border-color: #ddd;
+}
+.btn-secondary:hover { background: #e0e0e0; }
+
+/* Responsive: stack label above control on narrow screens */
+@media (max-width: 640px) {
+  .edit-form .form-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .edit-form label {
+    flex: 0 0 auto;
+  }
+  .form-actions {
+    justify-content: stretch;
+  }
+}

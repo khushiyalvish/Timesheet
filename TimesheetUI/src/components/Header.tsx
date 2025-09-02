@@ -93,7 +93,7 @@ const Header: React.FC = () => {
                 </button>
                 <button
                   className="dropdown-item"
-                  onClick={() => goTo('/second-checkin')}
+                  onClick={() => goTo('/checkin')}
                 >
                   CheckIn Time
                 </button>

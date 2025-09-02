@@ -81,6 +81,38 @@
   },
   {
     "ContainingType": "Timesheet.Controllers.TimesheetController",
+    "Method": "InsertCheckIn",
+    "RelativePath": "api/Timesheet/checkin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Timesheet.Model.Timesheet.CheckInRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Timesheet.Controllers.TimesheetController",
+    "Method": "CheckOut",
+    "RelativePath": "api/Timesheet/checkout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Timesheet.Model.Timesheet.CheckoutModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Timesheet.Controllers.TimesheetController",
     "Method": "InsertTimesheet",
     "RelativePath": "api/Timesheet/insert",
     "HttpMethod": "POST",
@@ -93,6 +125,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Timesheet.Controllers.TimesheetController",
+    "Method": "GetMyCheckIn",
+    "RelativePath": "api/Timesheet/my-checkin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

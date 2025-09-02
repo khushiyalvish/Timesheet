@@ -13,15 +13,31 @@
     {
       "AbsoluteMoniker": "D:0:0:{8C8864FF-AD28-4E31-BC68-0DF047BF9EDE}|Timesheet.csproj|d:\\myproject\\timesheetapi\\timesheet\\dal\\interfaces\\itimesheetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C8864FF-AD28-4E31-BC68-0DF047BF9EDE}|Timesheet.csproj|solutionrelative:dal\\interfaces\\itimesheetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C8864FF-AD28-4E31-BC68-0DF047BF9EDE}|Timesheet.csproj|d:\\myproject\\timesheetapi\\timesheet\\model\\timesheet\\checkoutmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C8864FF-AD28-4E31-BC68-0DF047BF9EDE}|Timesheet.csproj|solutionrelative:model\\timesheet\\checkoutmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C8864FF-AD28-4E31-BC68-0DF047BF9EDE}|Timesheet.csproj|d:\\myproject\\timesheetapi\\timesheet\\helpers\\tokenhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C8864FF-AD28-4E31-BC68-0DF047BF9EDE}|Timesheet.csproj|solutionrelative:helpers\\tokenhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C8864FF-AD28-4E31-BC68-0DF047BF9EDE}|Timesheet.csproj|d:\\myproject\\timesheetapi\\timesheet\\model\\timesheet\\getcheckinmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C8864FF-AD28-4E31-BC68-0DF047BF9EDE}|Timesheet.csproj|solutionrelative:model\\timesheet\\getcheckinmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C8864FF-AD28-4E31-BC68-0DF047BF9EDE}|Timesheet.csproj|d:\\myproject\\timesheetapi\\timesheet\\helpers\\geohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C8864FF-AD28-4E31-BC68-0DF047BF9EDE}|Timesheet.csproj|solutionrelative:helpers\\geohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedHeight": 1059,
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -32,7 +48,7 @@
               "RelativeDocumentMoniker": "Controllers\\TimesheetController.cs",
               "ToolTip": "D:\\MyProject\\TimesheetAPI\\Timesheet\\Controllers\\TimesheetController.cs",
               "RelativeToolTip": "Controllers\\TimesheetController.cs",
-              "ViewState": "AgIAAJEAAADAlpmZmRkfwI8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAMwAAAAAbGZmZmYqwNoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-14T11:49:40.681Z",
               "IsPinned": true,
@@ -46,7 +62,7 @@
               "RelativeDocumentMoniker": "DAL\\Interfaces\\ITimesheetRepository.cs",
               "ToolTip": "D:\\MyProject\\TimesheetAPI\\Timesheet\\DAL\\Interfaces\\ITimesheetRepository.cs",
               "RelativeToolTip": "DAL\\Interfaces\\ITimesheetRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAUwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-18T10:03:45.84Z",
               "IsPinned": true,
@@ -60,7 +76,7 @@
               "RelativeDocumentMoniker": "DAL\\Repositories\\TimesheetRepository.cs",
               "ToolTip": "D:\\MyProject\\TimesheetAPI\\Timesheet\\DAL\\Repositories\\TimesheetRepository.cs",
               "RelativeToolTip": "DAL\\Repositories\\TimesheetRepository.cs",
-              "ViewState": "AgIAACwAAACAKjMzMzMXwE8AAABMAAAAAAAAAA==",
+              "ViewState": "AgIAAO4AAABAZWZmZmYqwPIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-14T11:50:42.771Z",
               "IsPinned": true,
@@ -69,11 +85,70 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CheckoutModel.cs",
+              "DocumentMoniker": "D:\\MyProject\\TimesheetAPI\\Timesheet\\Model\\Timesheet\\CheckoutModel.cs",
+              "RelativeDocumentMoniker": "Model\\Timesheet\\CheckoutModel.cs",
+              "ToolTip": "D:\\MyProject\\TimesheetAPI\\Timesheet\\Model\\Timesheet\\CheckoutModel.cs",
+              "RelativeToolTip": "Model\\Timesheet\\CheckoutModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T17:36:58.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TokenHelper.cs",
+              "DocumentMoniker": "D:\\MyProject\\TimesheetAPI\\Timesheet\\Helpers\\TokenHelper.cs",
+              "RelativeDocumentMoniker": "Helpers\\TokenHelper.cs",
+              "ToolTip": "D:\\MyProject\\TimesheetAPI\\Timesheet\\Helpers\\TokenHelper.cs",
+              "RelativeToolTip": "Helpers\\TokenHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T17:30:34.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GetCheckinModel.cs",
+              "DocumentMoniker": "D:\\MyProject\\TimesheetAPI\\Timesheet\\Model\\Timesheet\\GetCheckinModel.cs",
+              "RelativeDocumentMoniker": "Model\\Timesheet\\GetCheckinModel.cs",
+              "ToolTip": "D:\\MyProject\\TimesheetAPI\\Timesheet\\Model\\Timesheet\\GetCheckinModel.cs",
+              "RelativeToolTip": "Model\\Timesheet\\GetCheckinModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T17:15:37.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GeoHelper.cs",
+              "DocumentMoniker": "D:\\MyProject\\TimesheetAPI\\Timesheet\\Helpers\\GeoHelper.cs",
+              "RelativeDocumentMoniker": "Helpers\\GeoHelper.cs",
+              "ToolTip": "D:\\MyProject\\TimesheetAPI\\Timesheet\\Helpers\\GeoHelper.cs",
+              "RelativeToolTip": "Helpers\\GeoHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T08:10:02.645Z"
             }
           ]
         },
         {
-          "DockedWidth": 871,
+          "DockedHeight": 195,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 329,
           "SelectedChildIndex": -1,
           "Children": [
             {

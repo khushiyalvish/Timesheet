@@ -1,0 +1,96 @@
+.mc-wrap {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 16px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #1f2937; /* slate-800-ish */
+}
+
+.mc-title {
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.mc-note {
+  padding: 10px 12px;
+  background: #f3f4f6; /* gray-100 */
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.mc-error {
+  padding: 10px 12px;
+  background: #fee2e2; /* red-100 */
+  border: 1px solid #fecaca; /* red-200 */
+  color: #991b1b; /* red-800 */
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.mc-table-wrap {
+  overflow-x: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+  background: #fff;
+}
+
+.mc-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px; /* keeps columns readable on narrow screens */
+}
+
+.mc-table thead th {
+  text-align: left;
+  font-weight: 600;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px 12px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.mc-table tbody td {
+  border-bottom: 1px solid #f3f4f6;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.mc-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.mc-empty {
+  text-align: center;
+  color: #6b7280; /* gray-500 */
+  padding: 16px;
+}
+
+.mc-in {
+  color: #065f46; /* green-800 */
+  font-weight: 600;
+}
+
+.mc-out {
+  color: #1e40af; /* blue-800 */
+  font-weight: 600;
+}
+
+
+
+.btn-checkout {
+  background: #e74c3c;
+  color: #fff;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-checkout:hover {
+  background: #c0392b;
+}
+

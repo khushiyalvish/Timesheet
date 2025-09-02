@@ -1,8 +1,6 @@
 
 
 
-
-
 import React, { useEffect, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -58,6 +56,15 @@ const TimesheetForm: React.FC<Props> = ({ userId, onInserted }) => {
       setError('Hours must be between 0 and 24.');
       return;
     }
+    if (!particular.trim()) {
+      setError('Particular is required.');
+      return;
+    }
+
+    if (hours <= 0) {
+      setError('Hours must be greater than 0.');
+      return;
+    }
 
     const model: TimesheetModel = {
       userId,
@@ -86,13 +93,13 @@ const TimesheetForm: React.FC<Props> = ({ userId, onInserted }) => {
   };
 
   // custom style for weekends
- const highlightWeekends = (date: Date): string => {
-  const day = date.getDay();
-  return day === 0 || day === 6 ? "weekend" : "";
-};
+  const highlightWeekends = (date: Date): string => {
+    const day = date.getDay();
+    return day === 0 || day === 6 ? "weekend" : "";
+  };
   return (
     <form className="timesheet-form" onSubmit={submit}>
-      
+
       <div className="form-row">
         <label>Work Date</label>
         <DatePicker

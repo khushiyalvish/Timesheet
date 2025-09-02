@@ -169,5 +169,60 @@ namespace Timesheet.Controllers
         }
 
 
+
+
+        //----For checkin time checkout time code start from here ------
+
+        [HttpPost("checkin")]
+        public async Task<IActionResult> InsertCheckIn([FromBody] CheckInRequestModel model)
+        {
+            if (model == null || model.UserId <= 0)
+                return BadRequest("Invalid request");
+
+            var response = await _repository.InsertCheckInAsync(model);
+            return Ok(response);
+        }
+
+
+
+
+        [HttpGet("my-checkin")]
+        public async Task<IActionResult> GetMyCheckIn()
+        {
+            try
+            {
+                var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value
+                                   ?? User.FindFirst(JwtRegisteredClaimNames.Sub)?.Value
+                                   ?? User.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier")?.Value;
+
+                if (string.IsNullOrEmpty(userIdClaim))
+                    return Unauthorized(new { Message = "UserId not found in token." });
+
+                int userId = int.Parse(userIdClaim);
+
+                var checkin = await _repository.GetCheckInByUserIdAsync(userId);
+                return Ok(checkin);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = "Failed to fetch checkin.", Error = ex.Message });
+            }
+        }
+
+
+
+        [HttpPost("checkout")]
+        public async Task<IActionResult> CheckOut([FromBody] CheckoutModel model)
+        {
+            if (model == null)
+                return BadRequest("Invalid request");
+
+            bool success = await _repository.CheckOutAsync(model);
+
+            if (success)
+                return Ok(new { Message = "Checked out successfully" });
+            else
+                return BadRequest(new { Message = "Check-out failed or already done" });
+        }
     }
 }

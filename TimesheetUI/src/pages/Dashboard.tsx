@@ -8,19 +8,9 @@ const Dashboard = () => {
     <>
       <Header />
      <div className="dashboard-container">
-      {/* <header className="dashboard-header">
-        <p>Your personalized dashboard overview</p>
-      </header> */}
-
-
+      {}
       <section className="dashboard-main">
-      {/*  <div className="main-card">
-        
-        
-        </div>
-         <div className="main-card">
-       
-        </div> */}
+      {}
       </section>
     </div>
    

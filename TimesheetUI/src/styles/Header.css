@@ -70,14 +70,15 @@ header {
 /* Services button - appears like a nav link but a button */
 .services-container { position: relative; }
 .nav-link.services-btn {
+
   background: transparent;
   border: none;
-  color: #374151;
-  font-weight: 530;
+  color: #373b42;
+  font-weight: 550;
   font-size: 16px;
   cursor: pointer;
   padding: 8px 10px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 8px;
   border-radius: 8px;

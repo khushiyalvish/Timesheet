@@ -79,6 +79,7 @@ D:\MyProject\TimesheetAPI\Timesheet\obj\Debug\net8.0\Timesheet.AssemblyInfo.cs
 D:\MyProject\TimesheetAPI\Timesheet\obj\Debug\net8.0\Timesheet.csproj.CoreCompileInputs.cache
 D:\MyProject\TimesheetAPI\Timesheet\obj\Debug\net8.0\Timesheet.MvcApplicationPartsAssemblyInfo.cs
 D:\MyProject\TimesheetAPI\Timesheet\obj\Debug\net8.0\Timesheet.MvcApplicationPartsAssemblyInfo.cache
+D:\MyProject\TimesheetAPI\Timesheet\obj\Debug\net8.0\Timesheet.sourcelink.json
 D:\MyProject\TimesheetAPI\Timesheet\obj\Debug\net8.0\rjimswa.dswa.cache.json
 D:\MyProject\TimesheetAPI\Timesheet\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 D:\MyProject\TimesheetAPI\Timesheet\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json

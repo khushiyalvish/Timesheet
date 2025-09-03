@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const API = axios.create({
   baseURL: 'http://localhost:7034/api', // your ASP.NET Core API base URL
+  withCredentials: true,
 });
 
 API.interceptors.request.use((config) => {

@@ -4,18 +4,20 @@ import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "../../styles/checkinform.css";
+import { useAuth } from "../../hooks/useAuth";
 
 
 const CheckInForm: React.FC = () => {
-  const currentUserId = 1;
+  // const currentUserId = 1;
+   const { userId } = useAuth();
 
   const [form, setForm] = useState({
-    userId: currentUserId,
+    userId: userId,
     deviceId: "WEB-123",
     location: "Sunteck Andheri", // fixed office name
     latitude: 0,
     longitude: 0,
-    createdBy: currentUserId,
+    createdBy: userId,
   });
 
   // get current location
@@ -55,12 +57,12 @@ const CheckInForm: React.FC = () => {
         toast.success(message);
         console.log("API Success:", message);
         setForm({
-          userId: currentUserId,
+          userId: userId,
           deviceId: "WEB-123",
           location: "Sunteck Andheri", // keep fixed
           latitude: 0,
           longitude: 0,
-          createdBy: currentUserId,
+          createdBy: userId,
         });
       } else {
         toast.error(message);

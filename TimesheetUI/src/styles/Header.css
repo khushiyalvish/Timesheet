@@ -54,7 +54,7 @@ header {
 .nav a {
   text-decoration: none;
   color: #374151;
-  font-weight: 530;
+  font-weight: 500;
   font-size: 15px;
   padding: 8px 10px;
   border-radius: 8px;
@@ -74,7 +74,7 @@ header {
   background: transparent;
   border: none;
   color: #373b42;
-  font-weight: 550;
+  font-weight: 500;
   font-size: 16px;
   cursor: pointer;
   padding: 8px 10px;
